@@ -1,9 +1,10 @@
-function Drawer() {
+function Drawer({yoink}) {
 
     function open() {
         let newLightBulb = { on: false, condition: "good"}
         const sound = new Audio('/sounds/open.wav')
         sound.play()
+        yoink(newLightBulb)
     }
 
     return (
