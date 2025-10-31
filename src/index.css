@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: "Creepster", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#root {
+  border-color: none;
+}
+
+.haunted {
+  height: 500px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.haunted div div {
+  width: 20%;
+}
+
+.haunted div {
+  position: relative;
+  background-color: black;
+  color: white;
+}
+
+.haunted div div .bulb {
+  position: absolute;
+  right: 10px;
+}
+
+.bulb {
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.haunted div.on {
+  background-color: white;
+  border: 1px solid rgb(254, 254, 145);
+  color: black;
+}
+
+.haunted div div span {
+  font-size: 25pt;
+}
+
+/* GHOST */
+span {
+  font-size: 50pt;
+  position: absolute;
+  top: 30%;
+  right: 25%;
+  animation-name: move-in-circles; 
+  animation-duration: 4s; 
+  animation-timing-function: linear; 
+  animation-iteration-count: infinite;
+}
+
+.haunted div {
+  border: 1px solid white;
+  margin: 10px;
+  padding: 10px;
+  min-height: 100px;
+}
+
+.haunted > img {
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  left: 120px;
+  cursor: pointer;
+}
+
+.drawer {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+
+.ghastly {
+  position: absolute;
+  top: 0;
+  translate: -1000px;
+  transition: translate 2s;
+}
+
+
+.ghastly.end {
+  margin-top: -20px;
+  translate: -120px;
+  width: 100vw;
+  height: 500px;
+  opacity: .1;
+}
+
+
+
+@keyframes move-in-circles {
+  0% {
+    transform: rotate(0deg) translate(25px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(25px) rotate(-360deg); 
+  }
+}
